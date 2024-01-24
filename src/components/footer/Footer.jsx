@@ -10,14 +10,10 @@ const Footer = () => {
                 </h1>
             </div>
             <nav className='nav'>
-                <p>MOON🌝</p>
+
             </nav>
             <div className='right'>
-                <ul>
-                    <li>
-                        <Link href="/notice">Notice</Link>
-                    </li>
-                </ul>
+                <img src="/moon.png" alt="" />
             </div>
         </header >
     )

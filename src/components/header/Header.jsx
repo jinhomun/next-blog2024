@@ -10,18 +10,21 @@ const Header = () => {
         <h1 className="logo">
           <Link href="/"> Jins blog</Link>
         </h1>
+
         <Theme />
-      </div>
-      <nav className="nav">
+
         <Link href="/">
-          <img src="/home.png" alt="" />
+          <img className="home" src="/home.png" alt="" />
         </Link>
         <Link href="/blog">
-          <img src="/blog.png" alt="" />
+          <img className="blog" src="/blog.png" alt="" />
         </Link>
         <Link href="/notice">
-          <img src="/notice.png" alt="" />
+          <img className="notice" src="/notice.png" alt="" />
         </Link>
+      </div>
+      <nav className="nav">
+
       </nav>
       <div className="right">
         <Menu />

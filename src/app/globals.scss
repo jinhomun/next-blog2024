@@ -1,3 +1,65 @@
+@font-face {
+  font-family: 'UtoStarLandMoon';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoStarlandmoon/UtoStarLandMoon.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoStarlandmoon/UtoStarLandMoon.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/utoStarlandmoon/UtoStarLandMoon.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/utoStarlandmoon/UtoStarLandMoon.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/utoStarlandmoon/UtoStarLandMoon.ttf') format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-weight: 200;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-UltraLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-UltraLight.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-UltraLight.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-UltraLight.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-UltraLight.ttf') format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Light.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Light.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Light.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Light.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Light.ttf') format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Regular.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Regular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Regular.ttf') format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Bold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Bold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/NanumBarunGothic/NanumBarunGothic-Bold.ttf') format("truetype");
+  font-display: swap;
+}
+
+
+
 :root {
   --black: #000;
   --black100: #000;
@@ -17,6 +79,8 @@
   --fontNan: "NanumSquareNeo";
   --fontGma: "GmarketSans";
   --fontOrb: "Orbitron";
+  --fontMoon: "UtoStarLandMoon";
+  --fontNaver: "NanumBarunGothic";
 
   /* 기본 폰트 설정 */
   font-family: var(--fontNan);
@@ -37,12 +101,33 @@
 .dark {
   --black: #000;
   --white: #fff;
-  background-color: #00a2ff;
+  background-color: #5e5e5e;
+
+
+  #header,
+  #footer {
+    background-color: #9b9b9b;
+  }
+
+
 
   .list__wrap {
+    a {
+      >:hover {
+        background: linear-gradient(180deg, rgba(31, 31, 31, 1) 0%, rgba(172, 171, 171, 1) 100%);
+      }
+    }
 
-    >:hover {
-      background: linear-gradient(180deg, rgba(22, 22, 22, 1) 11%, rgba(11, 67, 135, 1) 42%, rgba(0, 116, 255, 1) 63%);
+  }
+
+  .bottom {
+
+    .view,
+    .comment,
+    .like {
+      img {
+        filter: invert(1);
+      }
     }
   }
 
@@ -51,13 +136,40 @@
 .light {
   --black: #fff;
   --white: #000;
-  background-color: #b9e0f6;
+  background-color: #f8f8b8;
+
+  #header,
+  #footer {
+    background-color: #ffff69;
+  }
+
+  .login__header {
+    background-color: #f8f8b8;
+  }
+
+  svg {
+    color: #000;
+  }
+
 
   .list__wrap {
+    a {
+      >:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(99, 99, 99, 1) 100%);
 
-    >:hover {
-      background: linear-gradient(180deg, rgba(247, 247, 251, 1) 21%, rgba(0, 212, 255, 1) 100%);
+      }
+    }
 
+  }
+
+  .bottom {
+
+    .view,
+    .comment,
+    .like {
+      img {
+        filter: invert(0);
+      }
     }
   }
 
@@ -217,21 +329,29 @@ table {
     align-items: center;
 
     h1 {
-      font-size: 24px;
+      font-size: 40px;
       padding: 20px;
       margin-left: 10px;
-      font-family: var(--mainfont-gmark);
+      font-family: var(--fontMoon);
       font-weight: bold;
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
 
+    .blog,
+    .notice,
+    .home {
+      width: 40px;
+      height: 40px;
+      margin-left: 15px;
+
+    }
 
   }
 
 
 
   .nav {
-    margin-left: 50px;
+    margin-right: 72px;
 
     @media (max-width: 800px) {
       display: none;
@@ -241,7 +361,7 @@ table {
       width: 40px;
       height: 40px;
       margin-left: 15px;
-      
+
     }
 
     ul {
@@ -261,7 +381,7 @@ table {
         display: inline-block;
         padding: 12px;
         font-size: 12px;
-        font-family: var(--mainfont-gmark);
+        font-family: var(--fontMoon);
         font-weight: bold;
 
 
@@ -279,35 +399,33 @@ table {
 
 
   .right {
+    display: flex;
     margin-right: 50px;
+    align-items: center;
 
-    @media (max-width: 800px) {
-      display: none;
+    .user {
+      margin-right: 10px;
+      border: 2px solid var(--white);
+      border-radius: 5px;
+      padding: 7px;
+      display: flex; // .user에 Flexbox를 적용합니다.
+      align-items: center; // 필요에 따라 중앙 정렬을 적용합니다.
+
+      a {
+        font-size: 16px;
+        // font-weight: bold;
+        font-family: var(--fontMoon);
+        margin-right: 10px;
+      }
+
+
     }
 
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
 
-    ul {
-      display: flex;
-
-      li {
-        padding: 10px;
-        border: 1px solid var(--white);
-        background: var(--black);
-        border-radius: 10px;
-        margin-right: 15px;
-
-        a {
-          font-size: 14px;
-          font-weight: bold;
-          font-family: var(--mainfont-gmark);
-
-        }
-      }
-
-      :hover {
-        background-color: var(--white);
-        color: var(--black);
-      }
     }
   }
 
@@ -406,25 +524,24 @@ table {
 // footer
 #footer {
   width: 100%;
-  height: 80px;
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
-  border-top: 1px solid var(--white);
+  // border-top: 1px solid var(--white);
 
   .left {
     display: flex;
     align-items: center;
 
     h1 {
-      font-size: 24px;
+      font-size: 40px;
       padding: 20px;
       margin-left: 10px;
-      font-family: var(--mainfont-gmark);
+      font-family: var(--fontMoon);
       font-weight: bold;
-      text-transform: capitalize;
+      text-transform: uppercase;
 
       @media (max-width: 350px) {
         font-size: 15px;
@@ -437,6 +554,13 @@ table {
 
   .nav {
     margin-right: 10px;
+
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
 
     ul {
       display: flex;
@@ -453,7 +577,7 @@ table {
         display: inline-block;
         padding: 12px;
         font-size: 12px;
-        font-family: var(--mainfont-gmark);
+        font-family: var(--fontMoon);
         font-weight: bold;
 
 
@@ -465,6 +589,11 @@ table {
   .right {
     margin-right: 10px;
 
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
 
     ul {
       display: flex;
@@ -498,15 +627,16 @@ table {
   margin-bottom: 120px;
 
   .login__header {
-    border-top: 1px solid var(--white);
     color: var(--white);
     padding: 100px 0;
     margin-bottom: 20px;
 
     h3 {
-      font-size: 50px;
+      font-size: 70px;
+      font-family: var(--fontMoon);
       text-transform: uppercase;
       margin-bottom: 5px;
+
     }
 
 
@@ -529,7 +659,7 @@ table {
 
       button {
         border-radius: 5px;
-        border: 1px solid var(--white);
+        border: 2px solid var(--white);
         background-color: var(--black);
         width: 100%;
         padding: 18px 20px;
@@ -550,7 +680,7 @@ table {
 
         .google {
           border-radius: 5px;
-          border: 1px solid #fff;
+          border: 2px solid var(--white);
           background-color: #e87272;
           width: 100%;
           padding: 18px 20px;
@@ -570,7 +700,7 @@ table {
 
         .facebook {
           border-radius: 5px;
-          border: 1px solid #fff;
+          border: 2px solid var(--white);
           background-color: #0062ff;
           width: 100%;
           padding: 18px 20px;
@@ -590,7 +720,7 @@ table {
 
         .github {
           border-radius: 5px;
-          border: 1px solid #fff;
+          border: 2px solid var(--white);
           background-color: #9000ff;
           width: 100%;
           padding: 18px 20px;
@@ -610,7 +740,7 @@ table {
 
         .naver {
           border-radius: 5px;
-          border: 1px solid #fff;
+          border: 2px solid var(--white);
           background-color: #19a903;
           width: 100%;
           padding: 18px 20px;
@@ -630,7 +760,7 @@ table {
 
         .kakao {
           border-radius: 5px;
-          border: 1px solid #fff;
+          border: 2px solid var(--white);
           background-color: #f8b304;
           width: 100%;
           padding: 18px 20px;
@@ -682,140 +812,149 @@ table {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  >:hover {
-    background: linear-gradient(180deg, rgba(22, 22, 22, 1) 11%, rgba(11, 67, 135, 1) 42%, rgba(0, 116, 255, 1) 63%);
-  }
+  // >:hover {
+  //   background: linear-gradient(180deg, rgba(22, 22, 22, 1) 11%, rgba(11, 67, 135, 1) 42%, rgba(0, 116, 255, 1) 63%);
+  // }
 
-  >div {
-    border: 1px solid var(--white);
-    padding: 24px 20px;
-    border-radius: 10px;
+  a {
+    >div {
+      border: 2px solid var(--white);
+      padding: 24px 20px;
+      border-radius: 10px;
+      font-family: var(--fontMoon);
+      text-transform: capitalize;
 
-    .list {}
+      .img {
+        width: 300px;
+      }
 
-    .img {
-      width: 300px;
-    }
-
-    .cate {
-      padding: 3px 8px;
-      background: rgb(236, 253, 242);
-      color: rgb(52, 194, 106);
-      border-radius: 4px;
-      font-size: 14px;
-      margin-bottom: 20px;
-      display: inline-block;
-      font-family: var(--mainfont-gmark);
-    }
-
-    &:nth-child(2n) {
       .cate {
-        background: rgb(255, 237, 248);
-        color: rgb(211, 64, 153)
-      }
-    }
-
-    &:nth-child(3n) {
-      .cate {
-        background: rgb(255, 239, 237);
-        color: rgb(211, 80, 65)
-      }
-    }
-
-    .title {
-      font-size: 17px;
-      line-height: 1.6;
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: var(--white);
-      font-family: var(--mainfont-gmark);
-
-      &:hover {
-        text-decoration: underline;
-        text-underline-position: under;
-      }
-    }
-
-    .desc {
-      color: var(--white);
-      margin-bottom: 20px;
-      font-family: var(--mainfont-gmark);
-    }
-
-    .auth {
-      margin-top: 10px;
-      font-size: 18px;
-      position: relative;
-      color: var(--white);
-      font-family: var(--mainfont-gmark);
-      // padding-left: 30px;
-
-      // &::before {
-      //     content: '';
-      //     width: 20px;
-      //     height: 20px;
-      //     background-color: rgb(100, 70, 255);
-      //     position: absolute;
-      //     left: 0;
-      //     top: 0;
-      //     border-radius: 50%;
-      // }
-    }
-
-    .date {
-      color: var(--white);
-      font-family: var(--mainfont-gmark);
-    }
-
-    .bottom {
-      display: flex;
-      margin-top: 5px;
-
-      .view {
+        // padding: 3px 8px;
+        // background: rgb(236, 253, 242);
         color: var(--white);
-        display: flex;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: inline-block;
+        text-transform: capitalize;
 
-        p {
-          margin-left: 5px;
-          margin-right: 5px;
-        }
 
-        svg {
-          color: var(--black);
+      }
+
+      &:nth-child(2n) {
+        .cate {
+          background: rgb(255, 237, 248);
+          color: rgb(211, 64, 153)
         }
       }
 
-      .like {
-        color: var(--white);
-        display: flex;
-
-        p {
-          margin-left: 5px;
-          margin-right: 5px;
+      &:nth-child(3n) {
+        .cate {
+          background: rgb(255, 239, 237);
+          color: rgb(211, 80, 65)
         }
       }
 
-      .comment {
+      .title {
+        font-size: 25px;
+        line-height: 1.6;
+        font-weight: 600;
+        margin-bottom: 5px;
         color: var(--white);
-        display: flex;
 
-        p {
-          margin-left: 5px;
+
+        &:hover {
+          text-decoration: underline;
+          text-underline-position: under;
+        }
+      }
+
+      .desc {
+        color: var(--white);
+        margin-bottom: 20px;
+        font-family: var(--mainfont-gmark);
+        font-size: 18px;
+      }
+
+      .auth {
+        margin-top: 10px;
+        font-size: 18px;
+        position: relative;
+        color: var(--white);
+        font-family: var(--mainfont-gmark);
+        // padding-left: 30px;
+
+        // &::before {
+        //     content: '';
+        //     width: 20px;
+        //     height: 20px;
+        //     background-color: rgb(100, 70, 255);
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     border-radius: 50%;
+        // }
+      }
+
+      .date {
+        color: var(--white);
+        font-family: var(--mainfont-gmark);
+      }
+
+      .bottom {
+        display: flex;
+        margin-top: 5px;
+
+        .view {
+          color: var(--white);
+          display: flex;
+
+          p {
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+
+
+        }
+
+        .like {
+          color: var(--white);
+          display: flex;
+
+          p {
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+
+        }
+
+        .comment {
+          color: var(--white);
+          display: flex;
+
+          p {
+            margin-left: 5px;
+          }
+
+
         }
       }
     }
+
+
   }
 
 }
 
 
 .login__header {
-  border-top: 1px solid var(--white);
+  // border-top: 1px solid var(--white);
   padding: 50px 0;
   text-align: center;
 
   h3 {
-    font-size: 50px;
+    font-size: 80px;
+    font-family: var(--fontMoon);
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -828,7 +967,7 @@ table {
   }
 
   li {
-    border: 1px solid var(--white);
+    border: 2px solid var(--white);
     background-color: var(--black);
     border-radius: 10px;
     margin-left: 15px;
@@ -836,13 +975,11 @@ table {
     a {
       display: inline-block;
       padding: 12px;
-      font-size: 12px;
-      font-family: var(--mainfont-gmark);
+      font-size: 18px;
+      font-family: var(--fontMoon);
       font-weight: bold;
       color: var(--white);
-
-
-
+      text-transform: capitalize;
     }
 
     :hover {
@@ -855,7 +992,7 @@ table {
   input {
     padding: 5px;
     margin: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid var(--white);
     border-radius: 3px;
     outline: none;
     width: 500px;
@@ -875,9 +1012,9 @@ table {
 
   button {
     padding: 5px 10px;
-    background-color: #0062ff;
-    color: #fff;
-    // border: 1px solid var(--white);
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--white);
     border-radius: 3px;
     cursor: pointer;
 
@@ -1102,5 +1239,279 @@ section {
     background: #000;
     color: #fff;
     border: 1px solid #fff;
+  }
+}
+
+// detail
+.detail {
+  // display: flex;
+  // margin-left: 100px;
+  // margin-right: 100px;
+
+  .detail__wrap {
+    width: 600px;
+    margin: 0 auto;
+    padding: 26px;
+    border-radius: 8px;
+    border: 2px solid rgb(250, 250, 250);
+    background: var(--black);
+
+    @media (max-width: 1000px) {
+      border-radius: 0px;
+      border: 2px solid var(--black);
+    }
+
+    .detail__title {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--white);
+
+      .cate {
+        padding: 3px 8px;
+        background: rgb(236, 253, 242);
+        color: rgb(52, 194, 106);
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        display: inline-block;
+        font-family: var(--mainfont-gmark);
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        color: var(--white);
+        font-family: var(--fontMoon);
+        font-size: 30px;
+        text-transform: capitalize;
+      }
+
+      .info {
+        justify-content: space-between;
+        display: flex;
+
+        .auth {
+          font-size: 18px;
+          color: var(--white);
+          position: relative;
+          padding-left: 26px;
+          padding-top: 1px;
+          font-family: var(--fontMoon);
+
+          &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: rgb(100, 70, 255);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+          }
+        }
+
+        .bottom {
+          display: flex;
+          margin-top: 5px;
+
+          .view,
+          .like,
+          .comment {
+            color: var(--white);
+            display: flex;
+
+            p {
+              margin-left: 5px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .detail__content {
+      min-height: 120px;
+      color: var(--white);
+      word-break: keep-all;
+      font-family: var(--fontMoon);
+      font-size: 18px;
+      text-transform: capitalize;
+
+
+      img {
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+
+    .detail__btn {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      .like {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 10px 20px;
+        margin-right: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--white);
+        cursor: pointer;
+        font-size: 16px;
+
+
+        &:hover {
+          background: #fff;
+          color: #ff0000;
+        }
+      }
+
+      .right {
+        button {
+          background-color: var(--black);
+          color: var(--white);
+          padding: 10px 20px;
+          margin-right: 10px;
+          border-radius: 10px;
+          border: 1px solid var(--white);
+          cursor: pointer;
+          font-size: 16px;
+          font-family: var(--fontMoon);
+
+          &:hover {
+            background: var(--white);
+            color: var(--black);
+          }
+        }
+      }
+    }
+
+    .detail__comment {
+      margin-top: 20px;
+
+      h3 {
+        color: var(--white);
+        font-family: var(--fontMoon);
+        font-size: 15px;
+      }
+
+      .comment {
+        display: flex;
+
+        .comment__input {
+          width: 100%;
+          height: 100px;
+          padding: 10px;
+          border-radius: 10px;
+        }
+
+        button {
+          margin-left: 10px;
+          width: 50px;
+          border-radius: 10px;
+          border: 1px solid var(--white);
+          background: var(--black);
+          color: var(--white);
+          font-family: var(--fontMoon);
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .comment__wrap {
+    width: 600px;
+    max-height: 200px;
+    overflow-y: scroll;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 26px;
+    padding-top: 0px;
+    border-radius: 8px;
+    border: 2px solid rgb(250, 250, 250);
+    background: var(--black);
+
+    .comment__list {
+      margin-top: 20px;
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--white);
+
+
+
+      .auth {
+        color: var(--white);
+        font-family: var(--fontMoon);
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+
+      .comment {
+        display: flex;
+        margin-bottom: 10px;
+
+        p {
+
+          color: var(--white);
+          font-family: var(--fontMoon);
+          font-size: 20px;
+        }
+      }
+
+      .bottom {
+        text-align: right;
+
+        button {
+          margin-left: 10px;
+          width: 50px;
+          height: 20px;
+          border-radius: 5px;
+          border: 1px solid var(--white);
+          background: var(--black);
+          color: var(--white);
+          font-family: var(--fontMoon);
+          font-size: 15px;
+        }
+
+      }
+    }
+
+  }
+}
+
+
+
+
+
+// pagination
+.blog__page {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin: 0 5px;
+      padding: 0px 7px;
+      cursor: pointer;
+      border: 1px solid var(--white);
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      background-color: var(--black);
+      color: var(--white);
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--black);
+      }
+
+      &.active {
+        background-color: #f8b304;
+        color: #000000;
+      }
+    }
   }
 }

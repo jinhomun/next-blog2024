@@ -1,4 +1,4 @@
-import CardList from '@/components/cardList/CardList'
+import BoardDetail from '@/components/boardDetail/BoardDetail'
 import Category from '@/components/category/Category'
 import React from 'react'
 
@@ -6,14 +6,12 @@ export default function page() {
     return (
         <main>
             <div className='login__header'>
-                <h3>blog</h3>
-                <Category />
-                <input type="text" />
-                <button>검색</button>
+                <h3>Detail</h3>
             </div>
             <div className='card__list'>
-                <CardList />
+                <BoardDetail />
             </div>
         </main>
+
     )
 }

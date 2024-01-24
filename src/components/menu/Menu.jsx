@@ -10,24 +10,28 @@ export default function Menu() {
 
     const { data: session, status } = useSession();
     return (
-        <ul>
+        <>
             {/* <li><Link href='/'>Home</Link></li>
             <li><Link href='/blog'>블로그</Link></li>
             <li><Link href='/notice'>게시판</Link></li> */}
 
             {status === "authenticated" ? (
                 <>
-                    <li><span><a>{session.user.name}님 반가워요!!</a></span></li>
-                    <li><span onClick={signOut}><a>로그아웃</a></span></li>
+                    <span className='user'><a>{session.user.name}님 반가워요!!</a></span>
+                    <span onClick={signOut}><a><img src="/logout.png" alt="" /></a></span>
                 </>
             ) : (
                 <>
-                    <li><Link href='/login'>로그인</Link></li>
-                    <li><Link href='/join'>회원가입</Link></li>
+                    <Link href='/login'>
+                        <img src="/login.png" alt="" />
+                    </Link>
+                    <Link href='/join'>
+                        <img src="/join.png" alt="" />
+                    </Link>
                 </>
 
             )}
+        </>
 
-        </ul>
     )
 }
