@@ -1286,23 +1286,31 @@ section {
       display: flex;
 
       .auth {
-        font-size: 18px;
+        font-size: 20px;
         color: var(--white);
         position: relative;
-        padding-left: 26px;
+        // padding-left: 26px;
         padding-top: 1px;
         font-family: var(--fontMoon);
-
-        &::before {
-          content: '';
-          width: 20px;
-          height: 20px;
-          background-color: rgb(100, 70, 255);
-          position: absolute;
-          left: 0;
-          top: 0;
-          border-radius: 50%;
+        display: flex;
+        p {
+          img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+          }
         }
+        // &::before {
+        //   content: '';
+        //   width: 20px;
+        //   height: 20px;
+        //   background-color: rgb(100, 70, 255);
+        //   position: absolute;
+        //   left: 0;
+        //   top: 0;
+        //   border-radius: 50%;
+        // }
       }
 
       .bottom {
