@@ -14,7 +14,7 @@ export default function Card({ item }) {
     });
 
     return (
-        <Link href={`post/${item.slug}`}>
+        <Link href={`blogDetail/${item.slug}`}>
 
             <div className='list'>
 
@@ -29,20 +29,20 @@ export default function Card({ item }) {
 
                 </div>
                 <div className='auth'>
-                    {item.user.name}
+                    {/* {item.user.name} */}
                 </div>
                 <div className='date'>{koreanTime}</div>
                 <div className="bottom">
                     <div className='view'>
-                        <img src="/view.svg" alt="" />
+                        <image src="/view.svg" alt="" />
                         <p>{item.view}</p>
                     </div>
                     <div className='like'>
-                        <img src="/like.svg" alt="" />
+                        <image src="/like.svg" alt="" />
                         <p>0</p>
                     </div>
                     <div className='comment'>
-                        <img src="/comment.svg" alt="" />
+                        <image src="/comment.svg" alt="" />
                         <p>{item.comment}</p>
                     </div>
                 </div>

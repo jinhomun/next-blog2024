@@ -17,6 +17,7 @@ export default function Home({ searchParams }) {
           <input type="text" />
           <button>검색</button>
         </div>
+
         <div className='card__list'>
 
           <CardList page={page} cate={cate} />

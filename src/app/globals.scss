@@ -1243,112 +1243,126 @@ section {
 }
 
 // detail
-.detail {
-  // display: flex;
-  // margin-left: 100px;
-  // margin-right: 100px;
 
-  .detail__wrap {
-    width: 600px;
-    margin: 0 auto;
-    padding: 26px;
-    border-radius: 8px;
-    border: 2px solid rgb(250, 250, 250);
-    background: var(--black);
+.detail__wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 26px;
+  border-radius: 8px;
+  border: 2px solid var(--white);
+  background: var(--black);
 
-    @media (max-width: 1000px) {
-      border-radius: 0px;
-      border: 2px solid var(--black);
+  @media (max-width: 1000px) {
+    border-radius: 0px;
+    border: 2px solid var(--black);
+  }
+
+  .detail__title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--white);
+
+    .cate {
+      padding: 3px 8px;
+      background: rgb(236, 253, 242);
+      color: rgb(52, 194, 106);
+      border-radius: 4px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: inline-block;
+      font-family: var(--mainfont-gmark);
     }
 
-    .detail__title {
-      padding-bottom: 10px;
+    h3 {
       margin-bottom: 10px;
-      border-bottom: 1px solid var(--white);
-
-      .cate {
-        padding: 3px 8px;
-        background: rgb(236, 253, 242);
-        color: rgb(52, 194, 106);
-        border-radius: 4px;
-        font-size: 14px;
-        margin-bottom: 20px;
-        display: inline-block;
-        font-family: var(--mainfont-gmark);
-      }
-
-      h3 {
-        margin-bottom: 10px;
-        color: var(--white);
-        font-family: var(--fontMoon);
-        font-size: 30px;
-        text-transform: capitalize;
-      }
-
-      .info {
-        justify-content: space-between;
-        display: flex;
-
-        .auth {
-          font-size: 18px;
-          color: var(--white);
-          position: relative;
-          padding-left: 26px;
-          padding-top: 1px;
-          font-family: var(--fontMoon);
-
-          &::before {
-            content: '';
-            width: 20px;
-            height: 20px;
-            background-color: rgb(100, 70, 255);
-            position: absolute;
-            left: 0;
-            top: 0;
-            border-radius: 50%;
-          }
-        }
-
-        .bottom {
-          display: flex;
-          margin-top: 5px;
-
-          .view,
-          .like,
-          .comment {
-            color: var(--white);
-            display: flex;
-
-            p {
-              margin-left: 5px;
-              margin-right: 5px;
-            }
-          }
-        }
-      }
-    }
-
-    .detail__content {
-      min-height: 120px;
       color: var(--white);
-      word-break: keep-all;
       font-family: var(--fontMoon);
-      font-size: 18px;
+      font-size: 30px;
       text-transform: capitalize;
+    }
+
+    .info {
+      justify-content: space-between;
+      display: flex;
+
+      .auth {
+        font-size: 18px;
+        color: var(--white);
+        position: relative;
+        padding-left: 26px;
+        padding-top: 1px;
+        font-family: var(--fontMoon);
+
+        &::before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          background-color: rgb(100, 70, 255);
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 50%;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        margin-top: 5px;
+
+        .view,
+        .like,
+        .comment {
+          color: var(--white);
+          display: flex;
+
+          p {
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .detail__content {
+    min-height: 120px;
+    color: var(--white);
+    word-break: keep-all;
+    font-family: var(--fontMoon);
+    font-size: 18px;
+    text-transform: capitalize;
 
 
-      img {
-        margin-top: 10px;
-        width: 100%;
+    img {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+
+  .detail__btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .like {
+      background-color: var(--black);
+      color: var(--white);
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--white);
+      cursor: pointer;
+      font-size: 16px;
+
+
+      &:hover {
+        background: #fff;
+        color: #ff0000;
       }
     }
 
-    .detail__btn {
-      margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
-
-      .like {
+    .right {
+      button {
         background-color: var(--black);
         color: var(--white);
         padding: 10px 20px;
@@ -1357,33 +1371,25 @@ section {
         border: 1px solid var(--white);
         cursor: pointer;
         font-size: 16px;
-
+        font-family: var(--fontMoon);
 
         &:hover {
-          background: #fff;
-          color: #ff0000;
-        }
-      }
-
-      .right {
-        button {
-          background-color: var(--black);
-          color: var(--white);
-          padding: 10px 20px;
-          margin-right: 10px;
-          border-radius: 10px;
-          border: 1px solid var(--white);
-          cursor: pointer;
-          font-size: 16px;
-          font-family: var(--fontMoon);
-
-          &:hover {
-            background: var(--white);
-            color: var(--black);
-          }
+          background: var(--white);
+          color: var(--black);
         }
       }
     }
+  }
+
+  .comment__wrap {
+    // width: 600px;
+    max-height: 200px;
+    // margin: 0 auto;
+    // padding: 26px;
+    padding-top: 0px;
+    border-radius: 8px;
+    // border: 2px solid rgb(250, 250, 250);
+    background: var(--black);
 
     .detail__comment {
       margin-top: 20px;
@@ -1416,24 +1422,30 @@ section {
         }
       }
     }
+
+
+
   }
 
-  .comment__wrap {
-    width: 600px;
-    max-height: 200px;
-    overflow-y: scroll;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 26px;
-    padding-top: 0px;
+  .commentlist__wrap {
+    // width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 280px); // 3개의 열, 각각 50px 너비
+    // grid-template-rows: repeat(4, 150px); // 2개의 행, 각각 동일한 높이 (1fr)
+    gap: 10px;
+    // max-height: 150px;
+    // overflow-y: scroll;
+    // margin: 0 auto;
+    // margin-top: 50px;
+    // padding: 26px;
+    // padding-top: 0px;
     border-radius: 8px;
-    border: 2px solid rgb(250, 250, 250);
     background: var(--black);
 
     .comment__list {
       margin-top: 20px;
       width: 100%;
-      height: 120px;
+      height: 130px;
       padding: 10px;
       border-radius: 10px;
       border: 1px solid var(--white);
@@ -1476,9 +1488,11 @@ section {
 
       }
     }
-
   }
 }
+
+
+
 
 
 

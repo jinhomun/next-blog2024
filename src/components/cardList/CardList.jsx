@@ -3,7 +3,7 @@ import Card from '../card/Card'
 import Pagination from '../pagination/Pagination'
 
 const getData = async (page, cate) => {
-    const res = await fetch(`http://localhost:3000/api/post?page=${page}&cate=${cate || ''}`, {
+    const res = await fetch("http://localhost:3000/api/blogPost", {
         cache: "no-store"
     })
 
@@ -14,22 +14,22 @@ const getData = async (page, cate) => {
     return res.json()
 }
 
-export default async function CardList({ page, cate }) {
-    const { posts, count } = await getData(page, cate);
-    const postView = 2;
+export default async function CardList() {
+    const data = await getData();
 
-    console.log(posts)
+
+    // console.log(data)
 
     return (
         <>
             <div className='list__wrap'>
-                {posts.map((item) => (
+                {data.map((item) => (
 
                     <Card item={item} key={item.id} />
 
                 ))}
             </div>
-            <Pagination page={page} count={count} postView={postView} />
+            {/* <Pagination page={page} count={count} postView={postView} /> */}
         </>
 
     )

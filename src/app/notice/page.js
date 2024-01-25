@@ -1,17 +1,17 @@
-import BoardDetail from '@/components/boardDetail/BoardDetail'
-import Category from '@/components/category/Category'
 import React from 'react'
 
 export default function page() {
     return (
         <main>
             <div className='login__header'>
-                <h3>Detail</h3>
+                <h3>notice</h3>
+
+                <input type="text" />
+                <button>검색</button>
             </div>
             <div className='card__list'>
-                <BoardDetail />
+
             </div>
         </main>
-
     )
 }
