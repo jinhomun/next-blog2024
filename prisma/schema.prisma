@@ -11,19 +11,18 @@ datasource db {
 }
 
 model Account {
-  id                       String  @id @default(cuid()) @map("_id")
-  userId                   String
-  type                     String
-  provider                 String
-  providerAccountId        String
-  refresh_token            String?
-  refresh_token_expires_in Int?
-  access_token             String?
-  expires_at               Int?
-  token_type               String?
-  scope                    String?
-  id_token                 String?
-  session_state            String?
+  id                String  @id @default(cuid()) @map("_id")
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -46,8 +45,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  Post          Post[]
-  Comment       Comment[]
+  post          Post[]
+  comment       Comment[]
 }
 
 model VerificationToken {
@@ -63,7 +62,7 @@ model Category {
   slug  String  @unique
   title String
   img   String?
-  Posts Post[]
+  post  Post[]
 }
 
 model Post {
@@ -74,8 +73,8 @@ model Post {
   desc      String
   img       String?
   views     Int       @default(0)
-  catSlug   String
-  cat       Category  @relation(fields: [catSlug], references: [slug])
+  cateSlug  String
+  cate      Category  @relation(fields: [cateSlug], references: [slug])
   userEmail String
   user      User      @relation(fields: [userEmail], references: [email])
   comments  Comment[]

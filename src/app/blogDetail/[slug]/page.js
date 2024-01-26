@@ -1,8 +1,8 @@
 import Comments from '@/components/comments/Comments'
-import Commnets from '@/components/comments/Comments'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
 
 const getData = async (slug) => {
     const res = await fetch(`http://localhost:3000/api/blogDetail/${slug}`, {

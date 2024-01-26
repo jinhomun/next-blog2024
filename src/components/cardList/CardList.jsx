@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../card/Card'
 import Pagination from '../pagination/Pagination'
 
-const getData = async (page, cate) => {
+const getData = async () => {
     const res = await fetch("http://localhost:3000/api/blogPost", {
         cache: "no-store"
     })

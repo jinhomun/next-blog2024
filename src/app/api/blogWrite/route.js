@@ -14,7 +14,7 @@ export const POST = async (req) => {
 
     try {
         const body = await req.json();
-        const blogPost = await prisma.BlogPost.create({
+        const blogPost = await prisma.post.create({
             data: { ...body, userEmail: session.user.email }
         })
 
