@@ -14,6 +14,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const theme = "dark";
+
   return (
     <html lang="ko">
       <body className={inter.className}>
@@ -22,7 +24,7 @@ export default function RootLayout({ children }) {
             <ThemeProvider>
               <Header />
               {children}
-              <Footer />
+              <Footer theme={theme} />
             </ThemeProvider>
           </ThemeContextProvider>
         </AuthProvider>

@@ -30,21 +30,21 @@ export default async function page({ params }) {
             <div className='card__list'>
                 <div className='detail__wrap'>
                     <div className='detail__title'>
-                        <span className='cate'>{data.catSlug}</span>
+                        <span className='cate'>{data.cateSlug}</span>
                         <h3>{data.title}</h3>
                         <div className="info">
                             <span className='auth'><p><Image src={data.user.image} alt="dd" width={50} height={50} /></p>{data.user.name}</span>
                             <div className="bottom">
                                 <div className='view'>
-                                    <image src="/view.svg" alt="" />
+                                    <Image src="/view.svg" alt=""  width={23} height={23} />
                                     <p>{data.views}</p>
                                 </div>
                                 <div className='like'>
-                                    <image src="/like.svg" alt="" />
+                                    <Image src="/like.svg" alt="" width={25} height={25}  />
                                     <p>0</p>
                                 </div>
                                 <div className='comment'>
-                                    <image src="/comment.svg" alt="" />
+                                    <Image src="/comment.svg" alt="" width={23} height={23}  />
                                     <p>0</p>
                                 </div>
                             </div>

@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 // 디비에서 블로그 데이터 가져오기
 export const GET = async () => {
     try {
-        const post = await prisma.post.findMany();
+        const post = await prisma.Post.findMany();
 
         return new NextResponse(
             JSON.stringify(post, { status: 200 })

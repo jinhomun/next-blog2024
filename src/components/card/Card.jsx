@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -16,7 +17,7 @@ export default function Card({ item }) {
   return (
     <Link href={`blogDetail/${item.slug}`}>
       <div className="list">
-        <span className="cate">{item.catSlug}</span>
+        <span className="cate">{item.cateSlug}</span>
         <h3 className="title">{item.title}</h3>
         <p className="desc">{item.desc}</p>
         <div className="img"></div>
@@ -24,15 +25,15 @@ export default function Card({ item }) {
         <div className="date">{koreanTime}</div>
         <div className="bottom">
           <div className="view">
-            <image src="/view.svg" alt="" />
+            <Image src="/view.svg" alt="" width={23} height={23} />
             <p>{item.views}</p>
           </div>
           <div className="like">
-            <image src="/like.svg" alt="" />
+            <Image src="/like.svg" alt="" width={25} height={25} />
             <p>0</p>
           </div>
           <div className="comment">
-            <image src="/comment.svg" alt="" />
+            <Image src="/comment.svg" alt="" width={23} height={23} />
             <p>{item.comment}</p>
           </div>
         </div>
